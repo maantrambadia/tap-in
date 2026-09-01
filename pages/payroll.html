@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Payroll &amp; Salary | TapIn</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/payroll.css" />
+</head>
+
+<body>
+  <div class="payroll">
+    <div class="container">
+      <header class="top-nav">
+        <a href="dashboard.html" class="logo">TapIn</a>
+        <nav class="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="attendance.html" class="nav-link">Attendance</a>
+          <a href="leave.html" class="nav-link">Leave</a>
+          <a href="payroll.html" class="nav-link active">Payroll</a>
+          <a href="holidays.html" class="nav-link">Holidays</a>
+          <a href="settings.html" class="nav-link">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <span class="user-name">Alex Mercer</span>
+          <a href="../index.html" class="user-avatar">A</a>
+        </div>
+      </header>
+
+      <section class="greeting">
+        <h1 class="greeting-title">Payroll &amp; Salary</h1>
+        <p class="greeting-subtitle">Access current earnings statement, deduction breaks, and historic payslips</p>
+      </section>
+
+      <section class="overview-grid">
+        <article class="card month-overview">
+          <h2 class="card-title">Current Month Overview</h2>
+          <p class="card-subtitle">Statement for period: Aug 1 - Aug 31, 2026</p>
+          <div class="overview-list">
+            <div class="overview-row">
+              <span class="overview-label">Gross Base Salary</span>
+              <span class="overview-value">$7,500.00</span>
+            </div>
+            <div class="overview-row">
+              <span class="overview-label">Tax Deductions (TDS)</span>
+              <span class="overview-value deduction">-$850.00</span>
+            </div>
+            <div class="overview-row">
+              <span class="overview-label">Provident Fund (PF)</span>
+              <span class="overview-value deduction">-$450.00</span>
+            </div>
+            <div class="overview-row">
+              <span class="overview-label">Health Insurance</span>
+              <span class="overview-value deduction">-$120.00</span>
+            </div>
+            <div class="overview-row net-row">
+              <span class="overview-label">Net Take-home Salary</span>
+              <span class="overview-value net-value">$6,080.00</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card chart-card">
+          <h2 class="card-title">Earnings vs Deductions</h2>
+          <div class="chart-wrap">
+            <div class="donut"></div>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <span class="legend-dot orange"></span>
+                <div>
+                  <p class="legend-label">Take-home (81%)</p>
+                  <p class="legend-value">$6,080.00</p>
+                </div>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot red"></span>
+                <div>
+                  <p class="legend-label">Deductions (19%)</p>
+                  <p class="legend-value">$1,420.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="card payslip-card">
+        <h2 class="card-title">Payslip History</h2>
+        <div class="table-wrap">
+          <table class="payslip-list">
+            <thead>
+              <tr>
+                <th>MONTH</th>
+                <th>REFERENCE ID</th>
+                <th>GROSS PAY</th>
+                <th>DEDUCTIONS</th>
+                <th>NET PAID</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-month">July 2026</td>
+                <td>TXN-9847120</td>
+                <td>$7,500.00</td>
+                <td class="cell-deduction">$1,420.00</td>
+                <td class="cell-net">$6,080.00</td>
+                <td><button type="button" class="download-button">Download</button></td>
+              </tr>
+              <tr>
+                <td class="cell-month">June 2026</td>
+                <td>TXN-9736152</td>
+                <td>$7,500.00</td>
+                <td class="cell-deduction">$1,420.00</td>
+                <td class="cell-net">$6,080.00</td>
+                <td><button type="button" class="download-button">Download</button></td>
+              </tr>
+              <tr>
+                <td class="cell-month">May 2026</td>
+                <td>TXN-9623819</td>
+                <td>$7,500.00</td>
+                <td class="cell-deduction">$1,380.00</td>
+                <td class="cell-net">$6,120.00</td>
+                <td><button type="button" class="download-button">Download</button></td>
+              </tr>
+              <tr>
+                <td class="cell-month">April 2026</td>
+                <td>TXN-9512680</td>
+                <td>$7,500.00</td>
+                <td class="cell-deduction">$1,380.00</td>
+                <td class="cell-net">$6,120.00</td>
+                <td><button type="button" class="download-button">Download</button></td>
+              </tr>
+              <tr>
+                <td class="cell-month">March 2026</td>
+                <td>TXN-9400295</td>
+                <td>$7,200.00</td>
+                <td class="cell-deduction">$1,290.00</td>
+                <td class="cell-net">$5,910.00</td>
+                <td><button type="button" class="download-button">Download</button></td>
+              </tr>
+              <tr>
+                <td class="cell-month">February 2026</td>
+                <td>TXN-9288174</td>
+                <td>$7,200.00</td>
+                <td class="cell-deduction">$1,290.00</td>
+                <td class="cell-net">$5,910.00</td>
+                <td><button type="button" class="download-button">Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

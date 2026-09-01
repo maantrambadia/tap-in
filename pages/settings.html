@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Profile Settings | TapIn</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/settings.css" />
+</head>
+
+<body>
+  <div class="settings">
+    <div class="container">
+      <header class="top-nav">
+        <a href="dashboard.html" class="logo">TapIn</a>
+        <nav class="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="attendance.html" class="nav-link">Attendance</a>
+          <a href="leave.html" class="nav-link">Leave</a>
+          <a href="payroll.html" class="nav-link">Payroll</a>
+          <a href="holidays.html" class="nav-link">Holidays</a>
+          <a href="settings.html" class="nav-link active">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <span class="user-name">Alex Mercer</span>
+          <a href="../index.html" class="user-avatar">A</a>
+        </div>
+      </header>
+
+      <section class="greeting">
+        <h1 class="greeting-title">Profile Settings</h1>
+        <p class="greeting-subtitle">Manage your personal information, security preferences, and email notifications</p>
+      </section>
+
+      <section class="content-grid">
+        <div class="main-column">
+          <article class="card">
+            <h2 class="card-title">Personal Information</h2>
+            <p class="card-subtitle">Keep your details updated so your tax sheets and HR slips stay accurate.</p>
+            <form class="settings-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="full-name">Full Name</label>
+                  <input id="full-name" type="text" value="Alex Wong" />
+                </div>
+                <div class="form-field">
+                  <label for="preferred-name">Preferred Name</label>
+                  <input id="preferred-name" type="text" value="Alex" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="work-email">Work Email</label>
+                  <input id="work-email" type="email" value="alex.wong@company.com" />
+                </div>
+                <div class="form-field">
+                  <label for="phone">Phone Number</label>
+                  <input id="phone" type="text" value="+1 (555) 019-2834" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="dob">Date of Birth</label>
+                  <input id="dob" type="text" value="1995-08-12" />
+                </div>
+                <div class="form-field">
+                  <label for="department">Department</label>
+                  <input id="department" type="text" value="Product Design &amp; UX" />
+                </div>
+              </div>
+              <div class="form-field full">
+                <label for="address">Home Address</label>
+                <input id="address" type="text" value="123 Creative Studio Way, Brooklyn, NY" />
+              </div>
+            </form>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">Change Password</h2>
+            <p class="card-subtitle">Passwords must be at least 8 characters long and contain a special character.</p>
+            <form class="settings-form">
+              <div class="form-field full password-field">
+                <label for="current-password">Current Password</label>
+                <input id="current-password" type="password" value="------------" />
+                <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+              <div class="form-row">
+                <div class="form-field password-field">
+                  <label for="new-password">New Password</label>
+                  <input id="new-password" type="password" placeholder="Enter new password" />
+                  <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div class="form-field password-field">
+                  <label for="confirm-password">Confirm New Password</label>
+                  <input id="confirm-password" type="password" placeholder="Confirm new password" />
+                  <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+              </div>
+            </form>
+          </article>
+        </div>
+
+        <div class="side-column">
+          <article class="card profile-card">
+            <div class="profile-avatar">AW</div>
+            <p class="profile-name">Alex Wong</p>
+            <p class="profile-role">Product Designer - Product Team</p>
+            <div class="profile-actions">
+              <button type="button" class="profile-button upload">Upload New</button>
+              <button type="button" class="profile-button delete">Delete</button>
+            </div>
+          </article>
+
+          <article class="card notifications-card">
+            <h2 class="card-title">Notification Settings</h2>
+            <div class="toggle-list">
+              <label class="toggle-row">
+                <span class="toggle-label">Daily check-in reminders</span>
+                <span class="toggle">
+                  <input type="checkbox" checked />
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+              <label class="toggle-row">
+                <span class="toggle-label">Leave request status changes</span>
+                <span class="toggle">
+                  <input type="checkbox" checked />
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+              <label class="toggle-row">
+                <span class="toggle-label">Monthly payroll statements ready</span>
+                <span class="toggle">
+                  <input type="checkbox" />
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+              <label class="toggle-row">
+                <span class="toggle-label">Holiday and company events announcements</span>
+                <span class="toggle">
+                  <input type="checkbox" checked />
+                  <span class="toggle-track"></span>
+                </span>
+              </label>
+            </div>
+          </article>
+
+          <button type="button" class="save-button">Save All Changes</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

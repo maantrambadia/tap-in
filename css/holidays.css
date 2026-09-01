@@ -1,0 +1,480 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+.holidays {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 24px;
+  background-color: #141414;
+  border: 1px dashed #2a2a2a;
+  border-radius: 20px;
+}
+
+.logo {
+  color: #ff6b00;
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  color: #8a8a8a;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #ff6b00;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8a8a8a;
+  text-decoration: none;
+}
+
+.greeting {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.greeting-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.greeting-subtitle {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 20px;
+}
+
+.calendar-card,
+.side-column {
+  min-width: 0;
+}
+
+.card {
+  padding: 28px;
+  background-color: #141414;
+  border: 1px dashed #2a2a2a;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-title.small {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: #8a8a8a;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.calendar-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border: 1px dashed #2a2a2a;
+  border-radius: 8px;
+  color: #8a8a8a;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-arrow:hover {
+  color: #ffffff;
+  border-color: #404040;
+}
+
+.calendar-body {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(60px, 1fr));
+  gap: 10px;
+  min-width: 480px;
+  margin-bottom: 10px;
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  font-size: 12px;
+  color: #8a8a8a;
+  font-weight: 500;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(60px, 1fr));
+  gap: 10px;
+  min-width: 480px;
+}
+
+.day {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border: 1px dashed #2a2a2a;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.day.empty {
+  background-color: transparent;
+  border: none;
+}
+
+.holiday-blue {
+  border-color: #3b82f6;
+}
+
+.holiday-orange {
+  border-color: #ff6b00;
+}
+
+.holiday-green {
+  border-color: #22c55e;
+}
+
+.day-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.day-dot.blue {
+  background-color: #3b82f6;
+}
+
+.day-dot.orange {
+  background-color: #ff6b00;
+}
+
+.day-dot.green {
+  background-color: #22c55e;
+}
+
+.day-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #8a8a8a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.track-value {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.track-value.orange {
+  color: #ff6b00;
+}
+
+.track-label {
+  font-size: 12px;
+  color: #6e6e6e;
+}
+
+.holidays-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.holiday-item {
+  padding: 14px;
+  background-color: #1a1a1a;
+  border: 1px dashed #2a2a2a;
+  border-radius: 12px;
+}
+
+.holiday-date {
+  font-size: 12px;
+  color: #ff6b00;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.holiday-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.holiday-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.holiday-type {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6e6e6e;
+}
+
+.type-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.type-dot.blue {
+  background-color: #3b82f6;
+}
+
+.type-dot.orange {
+  background-color: #ff6b00;
+}
+
+.type-dot.green {
+  background-color: #22c55e;
+}
+
+.legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-dot.orange {
+  background-color: #ff6b00;
+}
+
+.legend-dot.blue {
+  background-color: #3b82f6;
+}
+
+.legend-dot.green {
+  background-color: #22c55e;
+}
+
+.legend-text {
+  font-size: 13px;
+  color: #8a8a8a;
+}
+
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-column {
+    flex-direction: column;
+  }
+
+  .side-column .card {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .greeting-title {
+    font-size: 26px;
+  }
+
+  .side-column {
+    flex-direction: column;
+  }
+
+  .side-column .card {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .holidays {
+    padding: 16px;
+  }
+
+  .top-nav {
+    padding: 14px 16px;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .calendar-grid {
+    gap: 6px;
+  }
+
+  .day {
+    min-height: 56px;
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .day-label {
+    font-size: 8px;
+  }
+
+  .day-dot {
+    top: 6px;
+    right: 6px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .track-value {
+    font-size: 22px;
+  }
+
+  .track-grid {
+    gap: 12px;
+  }
+
+  .holiday-name {
+    font-size: 13px;
+  }
+
+  .holiday-type {
+    font-size: 11px;
+  }
+
+  .legend-text {
+    font-size: 12px;
+  }
+}

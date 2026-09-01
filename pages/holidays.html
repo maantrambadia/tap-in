@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Holiday Calendar | TapIn</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/holidays.css" />
+</head>
+
+<body>
+  <div class="holidays">
+    <div class="container">
+      <header class="top-nav">
+        <a href="dashboard.html" class="logo">TapIn</a>
+        <nav class="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="attendance.html" class="nav-link">Attendance</a>
+          <a href="leave.html" class="nav-link">Leave</a>
+          <a href="payroll.html" class="nav-link">Payroll</a>
+          <a href="holidays.html" class="nav-link active">Holidays</a>
+          <a href="settings.html" class="nav-link">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <span class="user-name">Alex Mercer</span>
+          <a href="../index.html" class="user-avatar">A</a>
+        </div>
+      </header>
+
+      <section class="greeting">
+        <h1 class="greeting-title">Company Holiday Calendar</h1>
+        <p class="greeting-subtitle">Stay updated with company shutdowns, national holidays, and upcoming public holiday
+          dates.</p>
+      </section>
+
+      <section class="content-grid">
+        <article class="card calendar-card">
+          <div class="calendar-header">
+            <div>
+              <h2 class="card-title">August 2026</h2>
+              <p class="card-subtitle">Showing 4 registered company/national events</p>
+            </div>
+            <div class="calendar-nav">
+              <button type="button" class="nav-arrow">&lt;</button>
+              <button type="button" class="nav-arrow">&gt;</button>
+            </div>
+          </div>
+          <div class="calendar-body">
+            <div class="calendar-weekdays">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+              <span>Sun</span>
+            </div>
+            <div class="calendar-grid">
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day"><span class="day-number">1</span></div>
+              <div class="day"><span class="day-number">2</span></div>
+
+              <div class="day"><span class="day-number">3</span></div>
+              <div class="day"><span class="day-number">4</span></div>
+              <div class="day"><span class="day-number">5</span></div>
+              <div class="day"><span class="day-number">6</span></div>
+              <div class="day"><span class="day-number">7</span></div>
+              <div class="day"><span class="day-number">8</span></div>
+              <div class="day"><span class="day-number">9</span></div>
+
+              <div class="day holiday-blue">
+                <span class="day-number">10</span>
+                <span class="day-dot blue"></span>
+                <span class="day-label">Founders' Day</span>
+              </div>
+              <div class="day"><span class="day-number">11</span></div>
+              <div class="day"><span class="day-number">12</span></div>
+              <div class="day"><span class="day-number">13</span></div>
+              <div class="day"><span class="day-number">14</span></div>
+              <div class="day holiday-orange">
+                <span class="day-number">15</span>
+                <span class="day-dot orange"></span>
+                <span class="day-label">Independence Day</span>
+              </div>
+              <div class="day"><span class="day-number">16</span></div>
+
+              <div class="day"><span class="day-number">17</span></div>
+              <div class="day"><span class="day-number">18</span></div>
+              <div class="day"><span class="day-number">19</span></div>
+              <div class="day"><span class="day-number">20</span></div>
+              <div class="day holiday-green">
+                <span class="day-number">21</span>
+                <span class="day-dot green"></span>
+                <span class="day-label">Wellness Day</span>
+              </div>
+              <div class="day"><span class="day-number">22</span></div>
+              <div class="day"><span class="day-number">23</span></div>
+
+              <div class="day"><span class="day-number">24</span></div>
+              <div class="day"><span class="day-number">25</span></div>
+              <div class="day"><span class="day-number">26</span></div>
+              <div class="day"><span class="day-number">27</span></div>
+              <div class="day"><span class="day-number">28</span></div>
+              <div class="day"><span class="day-number">29</span></div>
+              <div class="day"><span class="day-number">30</span></div>
+
+              <div class="day holiday-blue">
+                <span class="day-number">31</span>
+                <span class="day-dot blue"></span>
+                <span class="day-label">Labor Eve</span>
+              </div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+              <div class="day empty"></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="side-column">
+          <article class="card track-card">
+            <h2 class="card-title small">Holiday Track Overview</h2>
+            <div class="track-grid">
+              <div class="track-item">
+                <p class="track-value orange">15 Days</p>
+                <p class="track-label">Company Total</p>
+              </div>
+              <div class="track-item">
+                <p class="track-value">6 Days</p>
+                <p class="track-label">Days Remaining</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card holidays-list-card">
+            <h2 class="card-title small">August Holidays</h2>
+            <div class="holidays-list">
+              <div class="holiday-item">
+                <div class="holiday-date">Aug 10, 2026</div>
+                <div class="holiday-main">
+                  <span class="holiday-name">Founders' Day</span>
+                  <span class="holiday-type">
+                    <span class="type-dot blue"></span>
+                    Company Holiday
+                  </span>
+                </div>
+              </div>
+              <div class="holiday-item">
+                <div class="holiday-date">Aug 15, 2026</div>
+                <div class="holiday-main">
+                  <span class="holiday-name">National Independence Day</span>
+                  <span class="holiday-type">
+                    <span class="type-dot orange"></span>
+                    National Holiday
+                  </span>
+                </div>
+              </div>
+              <div class="holiday-item">
+                <div class="holiday-date">Aug 21, 2026</div>
+                <div class="holiday-main">
+                  <span class="holiday-name">Summer Wellness Day</span>
+                  <span class="holiday-type">
+                    <span class="type-dot green"></span>
+                    Optional Holiday
+                  </span>
+                </div>
+              </div>
+              <div class="holiday-item">
+                <div class="holiday-date">Aug 31, 2026</div>
+                <div class="holiday-main">
+                  <span class="holiday-name">Labor Eve Observance</span>
+                  <span class="holiday-type">
+                    <span class="type-dot blue"></span>
+                    Company Holiday
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card legend-card">
+            <h2 class="card-title small">Holiday Legend</h2>
+            <div class="legend-list">
+              <div class="legend-item">
+                <span class="legend-dot orange"></span>
+                <span class="legend-text">National Public Holiday</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot blue"></span>
+                <span class="legend-text">Company Wide Off-Day</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot green"></span>
+                <span class="legend-text">Optional / Cultural Holiday</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

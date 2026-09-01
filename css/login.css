@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  background-color: #141414;
+  border: 1px dashed #2a2a2a;
+  border-radius: 24px;
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #8a8a8a;
+  margin-bottom: 32px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+.login-form label:first-of-type {
+  margin-top: 0;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #1a1a1a;
+  border: 1px dashed #2a2a2a;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.login-form input:focus {
+  border-color: #404040;
+}
+
+.login-button {
+  display: inline-block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px 16px;
+  background-color: #ff6b00;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #e6600d;
+}
+
+.login-helper {
+  font-size: 13px;
+  color: #6e6e6e;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 16px;
+  }
+
+  .login-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .login-title {
+    font-size: 28px;
+  }
+
+  .login-subtitle {
+    margin-bottom: 24px;
+  }
+
+  .login-form label {
+    font-size: 14px;
+  }
+
+  .login-form input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .login-helper {
+    font-size: 12px;
+  }
+}

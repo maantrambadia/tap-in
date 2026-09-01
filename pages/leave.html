@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Leave Management | TapIn</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/leave.css" />
+</head>
+
+<body>
+  <div class="leave">
+    <div class="container">
+      <header class="top-nav">
+        <a href="dashboard.html" class="logo">TapIn</a>
+        <nav class="nav-links">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="attendance.html" class="nav-link">Attendance</a>
+          <a href="leave.html" class="nav-link active">Leave</a>
+          <a href="payroll.html" class="nav-link">Payroll</a>
+          <a href="holidays.html" class="nav-link">Holidays</a>
+          <a href="settings.html" class="nav-link">Settings</a>
+        </nav>
+        <div class="user-menu">
+          <span class="user-name">Alex Mercer</span>
+          <a href="../index.html" class="user-avatar">A</a>
+        </div>
+      </header>
+
+      <section class="greeting">
+        <h1 class="greeting-title">Leave Management</h1>
+        <p class="greeting-subtitle">Request time off, view your balances, and track pending requests</p>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <p class="stat-label">Casual Leave</p>
+          <p class="stat-value">6 / 12 Days</p>
+          <div class="progress-track">
+            <div class="progress-fill orange" style="width: 50%"></div>
+          </div>
+          <p class="stat-note">Renewable next year Jan</p>
+        </article>
+
+        <article class="stat-card">
+          <p class="stat-label">Medical / Sick Leave</p>
+          <p class="stat-value">4 / 8 Days</p>
+          <div class="progress-track">
+            <div class="progress-fill green" style="width: 50%"></div>
+          </div>
+          <p class="stat-note">Requires cert. if &gt; 2 days</p>
+        </article>
+
+        <article class="stat-card">
+          <p class="stat-label">Earned Leave</p>
+          <p class="stat-value">12 / 18 Days</p>
+          <div class="progress-track">
+            <div class="progress-fill amber" style="width: 66.67%"></div>
+          </div>
+          <p class="stat-note">Accrued monthly basis</p>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="card request-form">
+          <h2 class="card-title">Request Time Off</h2>
+          <form class="leave-form">
+            <label for="leave-type">Leave Type</label>
+            <select id="leave-type" name="leave-type">
+              <option value="" disabled selected>Select Leave Type</option>
+              <option value="casual">Casual Leave</option>
+              <option value="sick">Medical / Sick Leave</option>
+              <option value="earned">Earned Leave</option>
+            </select>
+
+            <div class="date-row">
+              <div class="date-field">
+                <label for="start-date">Start Date</label>
+                <input id="start-date" type="text" name="start-date" placeholder="DD/MM/YYYY" />
+              </div>
+              <div class="date-field">
+                <label for="end-date">End Date</label>
+                <input id="end-date" type="text" name="end-date" placeholder="DD/MM/YYYY" />
+              </div>
+            </div>
+
+            <label for="reason">Reason for Leave</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Describe your reason..."></textarea>
+
+            <button type="submit" class="submit-button">Submit Request</button>
+          </form>
+        </article>
+
+        <article class="card requests-table">
+          <h2 class="card-title">Recent Time-Off Requests</h2>
+          <div class="table-wrap">
+            <table class="requests-list">
+              <thead>
+                <tr>
+                  <th>TYPE</th>
+                  <th>DURATION</th>
+                  <th>REASON</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-type">Sick Leave</td>
+                  <td>Aug 18 - Aug 19 (2d)</td>
+                  <td>Dental surgery follow-up</td>
+                  <td><span class="badge badge-approved">Approved</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-type">Casual Leave</td>
+                  <td>Sep 04 (1d)</td>
+                  <td>Family event / travel</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-type">Casual Leave</td>
+                  <td>Jul 12 (1d)</td>
+                  <td>Personal appointments</td>
+                  <td><span class="badge badge-approved">Approved</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-type">Earned Leave</td>
+                  <td>Jun 15 - Jun 20 (5d)</td>
+                  <td>Summer vacation trip</td>
+                  <td><span class="badge badge-rejected">Rejected</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
