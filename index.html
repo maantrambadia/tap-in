@@ -18,20 +18,29 @@
     <div class="login-card">
       <h1 class="login-title">Login</h1>
       <p class="login-subtitle">Enter your email below to login to your account</p>
-      <form class="login-form">
+      <form class="login-form" novalidate>
         <label for="email">Email</label>
-        <input id="email" type="email" name="email" />
+        <input id="email" type="email" name="email" autocomplete="username" />
 
         <label for="password">Password</label>
-        <input id="password" type="password" name="password" />
+        <div class="password-field">
+          <input id="password" type="password" name="password" autocomplete="current-password" />
+          <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-label="Toggle password visibility" role="button"
+            tabindex="0">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+        </div>
 
-        <a href="pages/select-role.html" class="login-button">Login</a>
+        <button type="submit" class="login-button">Login</button>
       </form>
       <p class="login-helper">
         Use your assigned company email and password. If you don't have credentials, contact your administrator.
       </p>
     </div>
   </main>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

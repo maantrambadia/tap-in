@@ -201,6 +201,7 @@ body {
   width: 18px;
   height: 18px;
   color: #6e6e6e;
+  cursor: pointer;
 }
 
 .side-column {
